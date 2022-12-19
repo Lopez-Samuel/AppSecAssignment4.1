@@ -1,0 +1,12 @@
+Part 2
+1.The two types of intents are explicit intents and implicit intents.
+2. The explicit intent is more secure because you are directly telling the application which component to use. The implicit intent uses keywords to figure out what component to use.
+3. In second fragment we see an implicit intent.
+4. In third fragment we see an explicit intent. 
+5. The proper way to do an intent is shown in third fragment since it is an explicit intent.
+
+The intent that needed fixing was the one in second fragment. To do this I sent the register view to the product scrolling view with the below lines of code.
+
+var intent = Intent(activity, ProductScrollingActivity::class.java)
+intent.putExtra("User", loggedInUser);
+startActivity(intent)

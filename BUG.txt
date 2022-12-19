@@ -1,0 +1,6 @@
+Part 4
+The vulnerability that exists is that the useCard file doesn’t check to make sure the card number being provided belongs to the user that’s currently logged in.
+The put call currently passes the card number and the token belonging to the logged in user.
+The backend server does not check to make sure the token corresponds to the user that the card belongs to.
+
+The way to resolve this would be to conduct a simple check to ensure the card number being passed in belongs to the user that’s logged in.
